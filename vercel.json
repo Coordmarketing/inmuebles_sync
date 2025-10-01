@@ -10,7 +10,11 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api/extractor",
+      "dest": "api/extractor.py"
+    },
+    {
+      "src": "/api/sync-final",  <-- ¡AÑADE ESTA NUEVA RUTA!
       "dest": "api/extractor.py"
     }
   ]
