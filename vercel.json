@@ -1,0 +1,17 @@
+{
+  "builds": [
+    {
+      "src": "api/extractor.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/extractor.py"
+    }
+  ]
+}
